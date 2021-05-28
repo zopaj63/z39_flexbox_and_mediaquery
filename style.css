@@ -1,0 +1,49 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-color:lightgray;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .container .box {
+    flex: 1 1 auto;
+    transition: margin 1s ease-in-out;
+  }
+  .box {
+    height: 100px;
+    background-color:darkgreen;
+    color:darkseagreen;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+  }
+
+@media screen and (max-width: 600px) {
+    .container .box {
+      flex-basis: 100%;
+      margin: 4px;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    .container .box {
+      flex-basis: calc(50% - 2 * 16px);
+      margin: 8px;
+    }
+  }
+  @media screen and (min-width: 1025px) {
+    .container .box {
+      flex-basis: calc(33% - 2 * 16px);
+      margin: 16px;
+    }
+  }
+
