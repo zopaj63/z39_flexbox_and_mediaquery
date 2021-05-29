@@ -19,6 +19,7 @@ body{
     flex: 1 1 auto;
     transition: margin 1s ease-in-out;
   }
+
   .box {
     height: 100px;
     background-color:darkgreen;
@@ -34,12 +35,14 @@ body{
       margin: 4px;
     }
   }
+
   @media screen and (min-width: 601px) and (max-width: 1024px) {
     .container .box {
       flex-basis: calc(50% - 2 * 16px);
       margin: 8px;
     }
   }
+  
   @media screen and (min-width: 1025px) {
     .container .box {
       flex-basis: calc(33% - 2 * 16px);
